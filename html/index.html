@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="../css/index.css">
+	<!-- Última versão gratuita do Font Awesome -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+</head>
+
+<body>
+	<div class="fundo-blur"></div>
+	<div class="container" id="container"><!--div do conteúdo inteiro-->
+		<div class="form-container sign-up-container"><!--div do lado sign up-->
+			<form action="#">
+				<h1>Criar conta</h1>
+				<div class="social-container">
+					<a href="#" class="social"><i class="fab fa-facebook-f"></i></a>
+					<a href="#" class="social"><i class="fab fa-google-plus-g"></i></a>
+					<a href="#" class="social"><i class="fab fa-linkedin-in"></i></a>
+				</div>
+				<span>ou use seu email para registrar</span>
+				<input type="text" placeholder="Name" />
+				<input type="email" placeholder="Email" />
+				<input type="password" placeholder="Password" />
+				<button id="registrar">Registrar</button>
+			</form>
+		</div>
+		<div class="form-container sign-in-container"><!--div do lado sign-->
+			<form action="#">
+				<h1>Entrar</h1>
+				<div class="social-container">
+					<a href="#" class="social"><i class="fab fa-facebook-f"></i></a>
+					<a href="#" class="social"><i class="fab fa-google-plus-g"></i></a>
+					<a href="#" class="social"><i class="fab fa-linkedin-in"></i></a>
+				</div>
+				<span>ou use sua conta</span>
+				<input type="email" placeholder="Email" />
+				<input type="password" placeholder="Password" />
+				<a href="#" style="border: 0; border-bottom: 1px; border-style: solid;">Esqueceu a senha?</a>
+				<button>Entrar</button>
+			</form>
+		</div>
+		<div class="overlay-container"><!--container que vai de um lado pro outro encapsulando o lado desejado-->
+			<div class="overlay">
+				<div class="overlay-panel overlay-left">
+					<h1>Bem-vindo de volta!</h1>
+					<p>Insira suas informações pessoais e junte-se a nós</p>
+					<button class="ghost" id="signIn">Entrar</button>
+				</div>
+				<div class="overlay-panel overlay-right">
+					<h1>Olá, amigo(a)!</h1>
+					<p>Para continuar conectado por favor coloque suas informações</p>
+					<button class="ghost" id="signUp">Cadastrar-se</button>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<script src="../JS/index.js"></script>
+</body>
+
+</html>
