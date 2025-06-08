@@ -19,7 +19,7 @@
 body {
 	background-position: 0 20px;
 	background-size: 100% 100%;
-	background-image: url(../indexBG.jpg);
+	background-image: url(../indexBG.png);
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -59,8 +59,8 @@ a {
 
 button {
 	border-radius: 20px;
-	border: 1px solid #FF4B2B;
-	background-color: #FF4B2B;
+	border: 1px solid #060e17;
+	background-color: #060e17;
 	color: #FFFFFF;
 	font-size: 12px;
 	font-weight: bold;
@@ -69,9 +69,11 @@ button {
 	text-transform: uppercase;
 	transition: transform 80ms ease-in;
 }
-button:hover{
+
+button:hover {
 	cursor: pointer;
 }
+
 button:active {
 	transform: scale(0.95);
 }
@@ -105,18 +107,21 @@ input {
 	width: 100%;
 	box-shadow: #333 2px 4px 7px;
 }
-input:hover{
+
+input:hover {
 	box-shadow: none;
 	border: #333 2px;
 	border-style: solid;
 	border-radius: 8px;
 }
-input:focus{
+
+input:focus {
 	box-shadow: none;
 	border: #333 2px;
 	border-style: solid;
 	border-radius: 8px;
 }
+
 .container {
 	background-color: #fff;
 	border-radius: 10px;
@@ -191,9 +196,8 @@ input:focus{
 }
 
 .overlay {
-	background: #FF416C;
-	background: -webkit-linear-gradient(to right, #cc4523, #e8a02e);
-	background: linear-gradient(to right, #cc4523, #e8a02e);
+	background: -webkit-linear-gradient(to right,#2c3440 20%, #c9aa8b 90%);
+	background: linear-gradient(to right, #2c3440 20%, #c9aa8b 90%);
 	background-repeat: no-repeat;
 	background-size: cover;
 	background-position: 0 0;
@@ -257,27 +261,78 @@ input:focus{
 	width: 40px;
 }
 
-footer {
-	background-color: #222;
-	color: #fff;
-	font-size: 14px;
-	bottom: 0;
-	position: fixed;
-	left: 0;
-	right: 0;
-	text-align: center;
-	z-index: 999;
+
+@media (max-width: 798px) {
+	.container {
+		width: 80%;
+		min-height: 600px;
+		height: auto;
+		flex-direction: column;
+		border-radius: 0;
+
+	}
+
+	.form-container {
+		width: 100%;
+		position: absolute;
+		top: 0;
+		left: 0;
+		opacity: 0;
+		transition: opacity 0.5s ease-in-out;
+		transform: translateX(0) !important;
+		z-index: 1;
+	}
+
+	.container.right-panel-active .sign-in-container {
+		opacity: 0;
+		z-index: 1;
+		
+	}
+
+	.container.right-panel-active .sign-up-container {
+		opacity: 1;
+		z-index: 2;
+		
+	}
+
+	.container:not(.right-panel-active) .sign-in-container {
+		opacity: 1;
+		z-index: 2;
+	}
+
+	.container:not(.right-panel-active) .sign-up-container {
+		opacity: 0;
+		z-index: 1;
+	}
+
+	.overlay-container {
+		display: none;
+		
+	}
+
+	form {
+		padding: 30px;
+			background: linear-gradient(to right, #2c3440 20%, #c9aa8b 90%);
+	}
+
+	button {
+		width: 70%;
+	}
+
+	input {
+		width: 80%;
+	}
+
+	/* Só aparece no mobile */
+	#signUp1 {
+		color: black;
+		background-color: #ece6db;
+		border-color: #e8a02e;
+	}
 }
 
-footer p {
-	margin: 10px 0;
-}
-
-footer i {
-	color: red;
-}
-
-footer a {
-	color: #3c97bf;
-	text-decoration: none;
+@media (min-width: 799px) {
+	#signUp1 {
+		display: none;
+	}
 }
