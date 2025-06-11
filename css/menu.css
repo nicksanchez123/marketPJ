@@ -19,18 +19,53 @@
     align-items: center;
 }
 
-.menu-select,
-.menu-select1,
-.menu-select2 {
+.button {
     background-color: rgba(255, 255, 255, 0.658);
     width: 300px;
-    height: 80px;
     text-align: center;
     font-size: larger;
     border-radius: 10px;
     border: 2px;
     border-style: solid;
 }
+/* From Uiverse.io by Madflows */ 
+.button {
+    position: relative;
+    overflow: hidden;
+    height: 4rem;
+    padding: 0 2rem;
+    border-radius: 1.5rem;
+    background: #ffffff;
+    background-size: 400%;
+    color: rgb(0, 0, 0);
+    border: none;
+    cursor: pointer;
+  }
+  
+  .button:hover::before {
+    transform: scaleX(1);
+  }
+  
+  .button-content {
+    position: relative;
+    z-index: 1;
+  }
+  
+  .button::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: scaleX(0);
+    transform-origin: 0 50%;
+    width: 100%;
+    height: inherit;
+    border-radius: inherit;
+    background: linear-gradient(to right, #f8c845 20%, #ffffff 90%);
+
+    transition: all 0.475s;
+  }
+  
 
 .background-filter {
     width: 100vw;
@@ -40,7 +75,7 @@
 }
 
 body {
-    background-image: url(../indexBG.jpg);
+    background-image: url(../indexBG.png);
     background-size: 100% 100%;
     margin: 0px 0 0px;
 
