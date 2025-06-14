@@ -40,6 +40,7 @@
     color: rgb(0, 0, 0);
     border: none;
     cursor: pointer;
+    overflow: hidden;
   }
   
   .button:hover::before {
@@ -62,7 +63,6 @@
     height: inherit;
     border-radius: inherit;
     background: linear-gradient(to right, #f8c845 20%, #ffffff 90%);
-
     transition: all 0.475s;
   }
   
